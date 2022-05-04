@@ -1,4 +1,4 @@
-import pygame
+import pygame, sys, time
 import setting
 
 
