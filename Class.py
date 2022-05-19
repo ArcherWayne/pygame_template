@@ -1,3 +1,6 @@
+import pygame
+from setting import * 
+
 class Player(pygame.sprite.Sprite):
     def __init__(self, groups):
         super(Player, self).__init__(groups)
