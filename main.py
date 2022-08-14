@@ -30,21 +30,22 @@ class MAINGAME:
 
 
     def game_loop(self):
-        # delta time    ------------------------------------------------------------------------------------- #
-        dt = time.time() - last_time
-        last_time = time.time()
+        while True:
+            # delta time    ------------------------------------------------------------------------------------- #
+            last_time = time.time()
+            dt = time.time() - last_time
 
-        # event loop    ------------------------------------------------------------------------------------- #
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT or (event.type == pygame.KEYDOWN and event.key == pygame.K_BACKSPACE):
-                pygame.quit()
-                sys.exit()
+            # event loop    ------------------------------------------------------------------------------------- #
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT or (event.type == pygame.KEYDOWN and event.key == pygame.K_BACKSPACE):
+                    pygame.quit()
+                    sys.exit()
 
-        if self.game_active:
-            self.screen.fill(WHITE)
-            # screen.blit(background_surface, background_rect)
-            self.all_sprites.update()
-            self.all_sprites.draw(self.screen)
+            if self.game_active:
+                self.screen.fill(WHITE)
+                # screen.blit(background_surface, background_rect)
+                self.all_sprites.update()
+                self.all_sprites.draw(self.screen)
 
 
         pygame.display.update()
