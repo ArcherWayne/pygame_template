@@ -28,7 +28,6 @@ class MAINGAME:
         self.last_time = time.time()
         self.game_active = True
 
-
     def game_loop(self):
         while True:
             # delta time    ------------------------------------------------------------------------------------- #
